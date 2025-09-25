@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>net.milkbowl</groupId>
+  <groupId>com.github.VintageGaming</groupId>
   <artifactId>Vault</artifactId>
   <name>Vault</name>
   <version>1.8</version>
@@ -225,15 +225,10 @@
   </dependencies>
   <distributionManagement>
     <repository>
-      <id>pub-repo</id>
-      <name>Public Releases</name>
-      <url>http://nexus.hc.to/content/repositories/pub_releases/</url>
+      <id>internal.repo</id>
+      <name>Staging Repository</name>
+      <url>file://${project.build.directory}/${version}</url>
     </repository>
-    <snapshotRepository>
-      <id>pub-repo</id>
-      <name>Public Snapshots</name>
-      <url>http://nexus.hc.to/content/repositories/pub_snapshots/</url>
-    </snapshotRepository>
   </distributionManagement>
   <properties>
     <java.version>21</java.version>
