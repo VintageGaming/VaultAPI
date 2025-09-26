@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dc4117b0ef9ec12b687958904b6d08ab3dde342f
 /* This file is part of Vault.
 
     Vault is free software: you can redistribute it and/or modify
@@ -994,6 +997,8 @@ public abstract class Chat {
     	return perms.getGroups();
     }
 }
+<<<<<<< HEAD
+=======
 =======
 /* This file is part of Vault.
 
@@ -1991,3 +1996,4 @@ public abstract class Chat {
     }
 }
 >>>>>>> 2428b33fef20d64affb4890e28cad1bbccb9071c
+>>>>>>> dc4117b0ef9ec12b687958904b6d08ab3dde342f

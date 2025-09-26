@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dc4117b0ef9ec12b687958904b6d08ab3dde342f
 package net.milkbowl.vault.permission;
 
 import java.util.logging.Logger;
@@ -517,6 +520,8 @@ public abstract class Permission
       return getDefaultGroup(world.getName());
   }
 
+<<<<<<< HEAD
+=======
 =======
 package net.milkbowl.vault.permission;
 
@@ -1037,4 +1042,5 @@ public abstract class Permission
   }
 
 >>>>>>> 2428b33fef20d64affb4890e28cad1bbccb9071c
+>>>>>>> dc4117b0ef9ec12b687958904b6d08ab3dde342f
 }

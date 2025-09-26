@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dc4117b0ef9ec12b687958904b6d08ab3dde342f
 package net.milkbowl.vault.economy;
 
 import org.jetbrains.annotations.NotNull;
@@ -52,6 +55,8 @@ public class EconomyResponse
     } 
      return false;
   }
+<<<<<<< HEAD
+=======
 =======
 package net.milkbowl.vault.economy;
 /*    */
@@ -94,4 +99,5 @@ public class EconomyResponse
      return false;
   }
 >>>>>>> 2428b33fef20d64affb4890e28cad1bbccb9071c
+>>>>>>> dc4117b0ef9ec12b687958904b6d08ab3dde342f
 }

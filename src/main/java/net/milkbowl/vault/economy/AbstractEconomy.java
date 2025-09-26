@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dc4117b0ef9ec12b687958904b6d08ab3dde342f
 package net.milkbowl.vault.economy;
 
 import org.bukkit.OfflinePlayer;
@@ -86,6 +89,8 @@ public abstract class AbstractEconomy
   public boolean createPlayerAccount(OfflinePlayer player, String worldName) {
      return createPlayerAccount(player.getName(), worldName);
   }
+<<<<<<< HEAD
+=======
 =======
 package net.milkbowl.vault.economy;
 
@@ -173,4 +178,5 @@ public abstract class AbstractEconomy
      return createPlayerAccount(player.getName(), worldName);
   }
 >>>>>>> 2428b33fef20d64affb4890e28cad1bbccb9071c
+>>>>>>> dc4117b0ef9ec12b687958904b6d08ab3dde342f
 }

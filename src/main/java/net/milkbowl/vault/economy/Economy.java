@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> dc4117b0ef9ec12b687958904b6d08ab3dde342f
 package net.milkbowl.vault.economy;
 
 import java.math.BigDecimal;
@@ -940,6 +943,8 @@ public interface Economy {
     }
 
 
+<<<<<<< HEAD
+=======
 =======
 package net.milkbowl.vault.economy;
 
@@ -1048,4 +1053,5 @@ public interface Economy {
   
   boolean createPlayerAccount(OfflinePlayer paramOfflinePlayer, String paramString);
 >>>>>>> 2428b33fef20d64affb4890e28cad1bbccb9071c
+>>>>>>> dc4117b0ef9ec12b687958904b6d08ab3dde342f
 }
