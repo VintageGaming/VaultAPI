@@ -299,19 +299,23 @@ Hooking into Vault isn't Exclusively posted by them (that I've seen), so I figur
             return;
         }
 
-        //Using New Vault Api with Extra Permission Methods & Vault2 Implementations
+        net.milkbowl.vault.economy.Economy economyProvider;
+
+        //Using Original Vault Api without Vault2 Implementations
         if (!vault.getDescription().getAuthors().getLast().equalsIgnoreCase("vintagegaming")) {
-            //Supply your Vault2 Economy Implementation
-            getServer().getServicesManager().register(net.milkbowl.vault.economy.Economy.class, new OldVaultEconomy(this), this, ServicePriority.Highest);
+            //Supply Original Vault Economy Implementation
+            economyProvider = new OldVaultEconomy(this);
             getLogger().info("Using Old Vault Economy Integration.");
         }
-        //Using Original Vault Api without Vault2 Implementations
+
+        //Using New Vault Api with or without Vault2 Implementations
         else {
-            //Supply Original Vault Economy Implementation
-            getServer().getServicesManager().register(net.milkbowl.vault2.economy.Economy.class, new NewVaultEconomy(this), this, ServicePriority.Highest);
+            //Supply your Vault2 Economy Implementation
+            economyProvider = new NewVaultEconomy(this);
             getLogger().info("Found New Vault Economy Integration!");
         }
 
+        getServer().getServicesManager().register(net.milkbowl.vault.economy.Economy.class, economyProvider, this, ServicePriority.Highest);
         getLogger().info("Successfully hooked into Vault as an Economy provider!");
     }
 
