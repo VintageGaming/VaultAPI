@@ -284,3 +284,69 @@ public class ExamplePlugin extends JavaPlugin {
     }
 }
 ```
+
+## Hooking into Original/Custom Vault API -- For Creating New Economy and Permissions Plugins that Work with Vault
+Hooking into Vault isn't Exclusively posted by them (that I've seen), so I figured I'd Include. See the example below:
+
+```java
+
+//For Creating Economy Plugins that Work with Vault as an Economy Provider
+    public void hookIntoVaultEconomy() {
+        // Check if Vault is on the server
+        Plugin vault = getServer().getPluginManager().getPlugin("Vault");
+        if (vault == null) {
+            getLogger().info("Vault not found, Economy hook disabled.");
+            return;
+        }
+
+        //Using New Vault Api with Extra Permission Methods & Vault2 Implementations
+        if (!vault.getDescription().getAuthors().getLast().equalsIgnoreCase("vintagegaming")) {
+            //Supply your Vault2 Economy Implementation
+            getServer().getServicesManager().register(net.milkbowl.vault.economy.Economy.class, new OldVaultEconomy(this), this, ServicePriority.Highest);
+            getLogger().info("Using Old Vault Economy Integration.");
+        }
+        //Using Original Vault Api without Vault2 Implementations
+        else {
+            //Supply Original Vault Economy Implementation
+            getServer().getServicesManager().register(net.milkbowl.vault2.economy.Economy.class, new NewVaultEconomy(this), this, ServicePriority.Highest);
+            getLogger().info("Found New Vault Economy Integration!");
+        }
+
+        getLogger().info("Successfully hooked into Vault as an Economy provider!");
+    }
+
+//For Creating Permission Plugins that Work with Vault as a Permissions Provider
+    public void hookIntoVaultPermission() {
+        // Check if Vault is on the server
+        Plugin vault = getServer().getPluginManager().getPlugin("Vault");
+        if (vault == null) {
+            getLogger().info("Vault not found, hook disabled.");
+            return;
+        }
+
+        // Check if a permission service is already registered.
+        if (getServer().getServicesManager().getRegistration(Permission.class) != null) {
+            getLogger().info("A permission plugin is already registered with Vault. Skipping hook.");
+            return;
+        }
+
+
+        net.milkbowl.vault.permission.Permission permissionProvider;
+
+        if (!vault.getDescription().getAuthors().getLast().equalsIgnoreCase("vintagegaming")) {
+            permissionProvider = new OldVaultBridge(this);
+            getLogger().info("Using Old Vault Integration.");
+        }
+        else {
+            permissionProvider = new NewVaultBridge(this);
+            getLogger().info("Found New Vault Integration!");
+        }
+
+        // Register Your permission provider with Vault's service manager.
+        // ServicePriority.Highest means other plugins should prefer our provider if multiple are available.
+        getServer().getServicesManager().register(net.milkbowl.vault.permission.Permission.class, permissionProvider, this, ServicePriority.Highest);
+
+        getLogger().info("Successfully hooked into Vault as a permission provider!");
+    }
+
+```
