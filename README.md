@@ -41,6 +41,12 @@ So, what features do I _think_ you'll like the most?
  * Broad range of supported plugins
  * Choice!
 
+### Feature Additions
+
+* **Multi-Currency Support - Thanks to VaultUnlocked/Vault2 API**
+* **More (if not full) Control Over Permissions Plugins**
+* **Folia Support**
+
 ## License
 Copyright (C) 2025 VintageGaming
 
@@ -60,8 +66,9 @@ along with Vault.  If not, see <http://www.gnu.org/licenses/>.
 ## Building
 VaultAPI comes with all libraries needed to build from the current branch.
 
-## Implementing Vault
-Implementing Vault is quite simple. It requires getting the Economy, Permission, or Chat service from the Bukkit ServiceManager. See the example below:
+## Implementing Custom Vault (No Change)
+Implementing the Custom Vault is quite simple and hasn't changed. It requires getting the Economy, Permission, or Chat service from the Bukkit ServiceManager. If a Server is using the Original Vault Plugin, there will be no issues.
+See the example below:
 
 ```java
 package com.example.plugin;
