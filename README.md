@@ -334,11 +334,11 @@ Hooking into Vault isn't Exclusively posted by them (that I've seen), so I figur
         net.milkbowl.vault.permission.Permission permissionProvider;
 
         if (!vault.getDescription().getAuthors().getLast().equalsIgnoreCase("vintagegaming")) {
-            permissionProvider = new OldVaultBridge(this);
+            permissionProvider = new OldVaultPermissions(this);
             getLogger().info("Using Old Vault Integration.");
         }
         else {
-            permissionProvider = new NewVaultBridge(this);
+            permissionProvider = new NewVaultPermissions(this);
             getLogger().info("Found New Vault Integration!");
         }
 
