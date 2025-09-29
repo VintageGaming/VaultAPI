@@ -175,7 +175,7 @@ public class ExamplePlugin extends JavaPlugin {
 }
 ```
 
-## Implementing VaultUnlocked/Vault2 API -- Soon to be Added Directly into the Main VaultAPI
+## Implementing VaultUnlocked/Vault2 Multi-Currency API -- Soon to be Added Directly into the Main VaultAPI
 Implementing VaultUnlocked/Vault2 API is quite simple. It requires getting the Economy, Permission, or Chat service from the Bukkit ServiceManager. See the example below:
 
 ```java
@@ -354,3 +354,4 @@ Hooking into Vault isn't Exclusively posted by them (that I've seen), so I figur
     }
 
 ```
+
