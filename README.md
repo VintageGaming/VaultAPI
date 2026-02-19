@@ -1,4 +1,7 @@
 # Custom VaultAPI - Abstraction Library API for Bukkit Plugins
+# This Page will NOT be Maintained anymore.
+# Please Visit [Vault](https://github.com/VintageGaming/Vault/)
+
 
 How to include the API with Maven: 
 ```xml
@@ -11,8 +14,8 @@ How to include the API with Maven:
 <dependencies>
     <dependency>
         <groupId>com.github.VintageGaming</groupId>
-        <artifactId>VaultAPI</artifactId>
-        <version>1.8</version>
+        <artifactId>Vault</artifactId>
+        <version>Release</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
@@ -24,7 +27,7 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 dependencies {
-    compileOnly "com.github.VintageGaming:VaultAPI:1.8"
+    compileOnly "com.github.VintageGaming:VaultI:+"
 }
 ```
 
@@ -292,6 +295,7 @@ Hooking into Vault isn't Exclusively posted by them (that I've seen), so I figur
     }
 
 ```
+
 
 
 
