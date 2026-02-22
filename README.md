@@ -27,7 +27,7 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 dependencies {
-    compileOnly "com.github.VintageGaming:VaultI:+"
+    compileOnly "com.github.VintageGaming:Vault:+"
 }
 ```
 
@@ -295,6 +295,7 @@ Hooking into Vault isn't Exclusively posted by them (that I've seen), so I figur
     }
 
 ```
+
 
 
 
